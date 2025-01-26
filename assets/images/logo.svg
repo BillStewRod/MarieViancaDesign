@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <style>
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
+            font-size: 48px;
+            letter-spacing: -2px;
+            fill: #c5a47e;
+        }
+        
+        .decorative-line {
+            stroke: #c5a47e;
+            stroke-width: 2;
+            opacity: 0.7;
+        }
+        
+        .background {
+            fill: #f3f3f3;
+        }
+    </style>
+    
+    <rect class="background" x="0" y="0" width="200" height="200"/>
+    
+    <g transform="translate(50,50)">
+        <path class="logo" d="M0 0H20V40H0V0Z" fill="#c5a47e"/>
+        <text x="10" y="30" class="logo">M</text>
+        
+        <path class="decorative-line" d="M30 20 Q45 35 60 20"/>
+        
+        <text x="45" y="30" class="logo">V</text>
+        <path class="logo" d="M45 0H65V40H45V0Z" fill="#c5a47e"/>
+    </g>
+    
+    <rect x="0" y="0" width="200" height="200" fill="none" stroke="#e5e5e5" stroke-width="1"/>
+</svg>
