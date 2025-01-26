@@ -16,6 +16,46 @@ h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
 }
 
+h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    /*text-transform: uppercase;*/
+    font-weight: normal;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.3s;  /* Slight delay for hero text */
+}
+
+h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+h3 {
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #333;
+    animation: fadeInUp 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+    opacity: 0;
+}
+
 .nav-links a {
     font-family: 'Cormorant Garamond', serif;
     text-decoration: none;
@@ -80,6 +120,22 @@ h1, h2, h3, h4 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     letter-spacing: 2px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease;
 }
 
 /* Hero Section */
@@ -186,6 +242,15 @@ h1, h2, h3, h4 {
     font-size: 48px;
     color: #333;
     font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 2px;  /* Added to match logo-text */
+    text-transform: uppercase;  /* Added to match logo-text style */
+    font-weight: normal;  /* Added for consistent weight */
+}
+
+.page-header {
+    padding: 120px 50px 5px;
+    text-align: center;
+    background-color: white;
 }
 
 .services {
@@ -336,13 +401,14 @@ footer {
 
 .about-text h2 {
     font-size: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .about-text h3 {
-    font-size: 20px;
+    font-size: 24px;
+    letter-spacing: 1px;
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .about-text p {
@@ -379,34 +445,6 @@ footer {
 
 .approach-item p {
     line-height: 1.6;
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-nav {
-        padding: 20px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-}
-
-@media (max-width: 768px) {
-    .intro-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .intro-text {
-        order: 2;
-    }
-    
-    .intro-image {
-        order: 1;
-    }
 }
 
 /* Contact Page Styles */
@@ -545,40 +583,30 @@ select:focus {
     outline: none;
     border-color: #9a8a78;
 }
+/* Responsive Design */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
+    .main-nav {
+        padding: 20px;
     }
 
-    .approach-grid {
-        grid-template-columns: 1fr;
+    .nav-links {
+        display: none;
     }
-}
 
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
+    .hero-content h1 {
+        font-size: 36px;
     }
-    
-    .contact-info {
-        padding-right: 0;
-    }
-}
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #333;
-    margin: 5px 0;
-    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -616,5 +644,39 @@ select:focus {
 
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-text {
+        order: 2;
+    }
+    
+    .intro-image {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        padding-right: 0;
     }
 }
