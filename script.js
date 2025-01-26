@@ -18,23 +18,23 @@ window.addEventListener('scroll', function() {
         nav.style.boxShadow = 'none';
     }
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const videos = [
-        'assets/videos/interiorspace1.mp4',
-        'assets/videos/interiorspace2.mp4'
-    ];
-    
-    let currentVideoIndex = 0;
-    const videoElement = document.querySelector('.hero-video');
-    const videoSource = videoElement.querySelector('source');
+function handleVideoTransition() {
+    const videos = document.querySelectorAll('.hero-video');
+    let currentIndex = 0;
 
-    videoElement.addEventListener('ended', () => {
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        videoSource.src = videos[currentVideoIndex];
-        videoElement.load();
-        videoElement.play();
-    });
-});
+    videos[0].play();
+
+    setInterval(() => {
+        videos[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % videos.length;
+        videos[currentIndex].classList.add('active');
+        videos[currentIndex].currentTime = 0;
+        videos[currentIndex].play();
+    }, 4000); 
+}
+
+document.addEventListener('DOMContentLoaded', handleVideoTransition);
+
     const nav = document.querySelector('.main-nav');
     let lastScrollTop = 0;
     let isNavVisible = true;
