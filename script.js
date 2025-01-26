@@ -35,16 +35,18 @@ function handleVideoTransition() {
 
 document.addEventListener('DOMContentLoaded', handleVideoTransition);
 
+    // Remove or comment out this entire section
+    /*
     const nav = document.querySelector('.main-nav');
     let lastScrollTop = 0;
     let isNavVisible = true;
-
+    
     // Hide nav after 2 seconds
     setTimeout(() => {
         nav.classList.add('nav-hidden');
         isNavVisible = false;
     }, 2000);
-
+    
     // Show nav when mouse moves to top of screen
     document.addEventListener('mousemove', (e) => {
         if (e.clientY < 50) {
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', handleVideoTransition);
             isNavVisible = true;
         }
     });
-
+    
     // Hide nav on scroll down, show on scroll up
     window.addEventListener('scroll', () => {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', handleVideoTransition);
         
         lastScrollTop = scrollTop;
     });
+    */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
