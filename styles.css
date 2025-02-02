@@ -128,6 +128,33 @@ h3 {
     color: white;
 }
 
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s ease-in-out;
+        backdrop-filter: blur(5px);
+        gap: 30px;
+    }
+
+    /* Only change color to black when menu is active */
+    .home-page .nav-links.active a {
+        color: black;
+    }
+
+    /* Keep white color when menu is not active on home page */
+    .home-page .nav-links:not(.active) a {
+        color: white;
+    }
+}
 .home-page .logo-text {
     color: white;
 }
