@@ -125,7 +125,7 @@ h3 {
 
 /* Special styling for home page */
 .home-page .nav-links a {
-    color: white;
+    color: black;
 }
 
 .home-page .logo-text {
@@ -134,6 +134,10 @@ h3 {
 
 .home-page .logo img {
     filter: brightness(0) invert(1);
+}
+
+.home-page .hamburger span {
+    background-color: white;
 }
 
 /* Hamburger Menu */
