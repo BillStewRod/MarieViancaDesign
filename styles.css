@@ -125,7 +125,7 @@ h3 {
 
 /* Special styling for home page */
 .home-page .nav-links a {
-    color: black;
+    color: white;
 }
 
 .home-page .logo-text {
@@ -743,22 +743,18 @@ p {
         justify-content: center;
         transition: 0.3s ease-in-out;
         backdrop-filter: blur(5px);
+        gap: 30px;
     }
 
     .nav-links.active {
         right: 0;
+        display: flex;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+    /* Override the white color for home page when menu is active */
+    .home-page .nav-links.active a,
+    .nav-links.active a {
+        color: black;
     }
 }
 
