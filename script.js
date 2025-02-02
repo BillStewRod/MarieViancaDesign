@@ -10,12 +10,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Add scroll effect to navigation
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.main-nav');
-    if (window.scrollY > 50) {
-        nav.style.background = 'rgba(255, 255, 255, 0.98)';
-        nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        nav.style.background = 'rgba(255, 255, 255, 0.95)';
-        nav.style.boxShadow = 'none';
+    const isHomePage = document.body.classList.contains('home-page');
+    
+    if (!isHomePage) {
+        if (window.scrollY > 50) {
+            nav.style.background = 'rgba(255, 255, 255, 0.98)';
+            nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        } else {
+            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.style.boxShadow = 'none';
+        }
     }
 });
 function handleVideoTransition() {
