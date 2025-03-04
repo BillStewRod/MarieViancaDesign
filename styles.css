@@ -642,6 +642,7 @@ footer {
     animation-delay: 0.8s;
 }
 
+/* Submit Button Hover */
 .submit-button:hover {
     background: #333;
     color: white;
